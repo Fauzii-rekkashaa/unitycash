@@ -1,0 +1,121 @@
+body {
+    background-color: #0F4571;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f3ecec;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section Background */
+.faq-section {
+    background-color: #0b4460;
+    padding: 50px 0;
+}
+
+/* Judul FAQ – diperkecil */
+.faq-section h1 {
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 28px !important;
+    text-align: center;
+}
+
+/* Container melebar */
+.faq-section .container {
+    max-width: 1000px !important;
+}
+
+/* Kotak FAQ – diperkecil & dilebarin */
+.faq-box {
+    background: white;
+    padding: 10px 15px !important;   /* sebelumnya 25px → jadi lebih tipis */
+    border-radius: 5px;
+    margin-bottom: 25px !important;
+    text-align: center !important;
+
+    width: 100%;             /* pastikan melebar penuh */
+    max-width: 1100px;       /* dilebarin sedikit */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Pertanyaan – perkecil dan tengah */
+.faq-box h3 {
+    font-size: 16px !important;
+    margin-bottom: 6px;
+    text-align: center !important;
+}
+
+/* Jawaban – perkecil dan tengah */
+.faq-box span {
+    font-size: 13px !important;
+    color: #333;
+    text-align: center !important;
+    line-height: 1.4;
+    display: block;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}

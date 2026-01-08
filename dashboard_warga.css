@@ -1,0 +1,231 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: #e8ecf5;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0a2a47;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.sidebar.close {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #1b4d8e;
+}
+
+/* ===== MAIN ===== */
+.main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.main.expand {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* HEADER */
+.dashboard-header {
+    background: #083a70;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.dashboard-header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+}
+
+/* ========== CONTENT ========== */
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== CARD ATAS ===== */
+.card-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+/* OVERRIDE BOOTSTRAP CARD */
+.card-container .card {
+    width: 260px;
+    padding: 18px;
+    border-radius: 14px;
+    color: #fff;
+    background-color: transparent; /* reset bootstrap */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s ease;
+}
+
+.card-container .card:hover {
+    box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+}
+
+.card-container .card h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.card-container .card p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+/* WARNA — DIPAKSA MENANG */
+.card-container .card.card-blue {
+    background-color: #3498db !important;
+}
+
+.card-container .card.card-green {
+    background-color: #1fa650 !important;
+}
+
+.card-container .card.card-red {
+    background-color: #e74c3c !important;
+}
+
+
+/* ===== GRAFIK ===== */
+.chart-section {
+    background: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 26px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.chart-legend {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chart-legend span {
+    margin: 0 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.dot.blue { background: #1c67d1; }
+.dot.red { background: #e72828; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}

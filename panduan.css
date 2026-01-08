@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image:url('BG KOSONG.png');
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;   
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f3ecec;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.panduan-container {
+    background: #0F4571;
+    color: white;
+    text-align: center;
+    padding: 30px 20px; /* DARI 50px jadi 30px agar tidak terlalu jauh */
+}
+
+.panduan-container h1 {
+    margin-bottom: 20px; /* Kurangi jarak bawah */
+    font-size: 30px;
+}
+
+.panduan-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr)); /* Lebih fleksibel dan sedikit lebih lebar */
+    gap: 25px;
+    max-width: 1300px; /* DARI 1200px jadi 1300px agar lebih lebar */
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 18px;
+    border-radius: 10px;
+    min-height: 230px; /* DARI 260px jadi 230px agar tidak terlalu tinggi */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+ 
+.card p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+

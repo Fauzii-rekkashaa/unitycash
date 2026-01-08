@@ -1,0 +1,250 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: #e8ecf5;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0a2a47;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.sidebar.close {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #1b4d8e;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.main.expand {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* ===== NAVBAR ===== */
+.dashboard-header {
+    background: #083a70;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.dashboard-header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.logout:hover {
+    opacity: 0.8;
+}
+
+/* ================================
+   MAIN CONTENT (DITENGAH)
+================================ */
+.content {
+    width: 80%;              /* diperkecil */
+    margin: 0 auto;          /* center */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ================================
+   CARD STATISTIK
+================================ */
+
+.card-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+/* OVERRIDE BOOTSTRAP CARD */
+.card-container .card {
+    width: 18%;
+    padding: 18px;
+    border-radius: 14px;
+    color: white;
+    background-color: transparent;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s ease;
+}
+
+.card-container .card:hover {
+    box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+}
+
+.card-container .card h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.card-container .card p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+/* WARNA CARD (FLAT / TANPA GRADASI) */
+.card-container .card-blue {
+    background-color: #3498db;
+}
+
+.card-container .card-green {
+    background-color: #1fa650;
+}
+
+.card-container .card-yellow {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.card-container .card-red {
+    background-color: #e74c3c;
+}
+
+/* ================================
+   GRAFIK / BAR CHART
+================================ */
+.chart-wrapper {
+    background: white;
+    padding: 18px;           /* lebih ramping */
+    border-radius: 12px;
+    width: 65%;              /* diperkecil */
+    margin: 0 auto;          /* center */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 20px;         /* lebih kecil */
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.chart-legend {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 12px;         /* diperkecil */
+}
+
+.chart-legend span {
+    margin: 0 10px;          /* lebih rapat */
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dot.blue { background: #3498db; }
+.dot.green { background: #2ecc71; }
+.dot.yellow { background: #f1c40f; }
+.dot.red { background: #e74c3c; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}

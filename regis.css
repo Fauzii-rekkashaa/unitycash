@@ -1,0 +1,122 @@
+body {
+    background-image: url('HALAMAN LOGIN.jpg');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f3ecec;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --- PERBAIKAN UTAMA --- */
+.container {
+    min-height: calc(100vh - 100px); /* 100px = kira2 tinggi navbar */
+    display: flex;
+    align-items: center;      /* Form rata tengah vertikal */
+    justify-content: flex-end; /* Tetap di kanan */
+    padding-right: 60px;
+}
+
+/* Batasi tinggi gambar kiri supaya tidak mendorong form */
+.container img {
+    max-height: 70vh; /* tidak memanjang ke bawah */
+    width: auto;
+}
+
+/* Form Box */
+.regis-formbox {
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 10px;
+    font-size: 14px;
+    height: 42px;
+}
+
+/* Register button */
+.btn-register {
+    background-color: #2769E8;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn-register:hover {
+    background-color: #1c4faf;
+}
+/* ============================= */
+/* WARNA TEKS FORM REGISTRASI    */
+/* ============================= */
+
+/* Judul form */
+.regis-formbox h3 {
+    color: #ffffff;
+}
+
+/* Label input */
+.regis-formbox .form-label {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Teks di dalam input */
+.regis-formbox .form-control {
+    color: #000000; /* teks saat mengetik */
+}
+
+/* Placeholder */
+.regis-formbox .form-control::placeholder {
+    color: #bfbfbf;
+}
+
+/* Textarea khusus */
+.regis-formbox textarea.form-control {
+    color: #000000;
+}
+
+/* Select dropdown */
+.regis-formbox select.form-control {
+    color: #000000;
+}
+
+/* Option di dropdown */
+.regis-formbox select option {
+    color: #000000;
+}

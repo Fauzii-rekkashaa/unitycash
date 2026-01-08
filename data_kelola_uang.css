@@ -1,0 +1,310 @@
+/* =======================
+   RESET
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e8ecf5;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =======================
+   SIDEBAR
+======================= */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0a2a47;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.sidebar.close {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #1b4d8e;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.main.expand {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* ===== NAVBAR ===== */
+.dashboard-header {
+    background: #083a70;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.dashboard-header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.logout:hover {
+    opacity: 0.8;
+}
+
+/* =======================
+   CONTENT TENGAH
+======================= */
+.content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* =======================
+   BOX TABEL
+======================= */
+.table-box {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* =======================
+   TABEL CLEAN
+======================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.table thead th {
+    background: #ffffff !important;           /* ❌ no warna */
+    color: #000;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+}
+
+/* row selang-seling abu */
+.table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+/* kolom teks panjang */
+.table tbody td:nth-child(4),
+.table tbody td:nth-child(6) {
+    text-align: left;
+}
+
+/* =======================
+   STATUS BADGE
+======================= */
+.badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bg-success {
+    background: #198754 !important;
+}
+
+.bg-danger {
+    background: #dc3545 !important;
+}
+
+/* =======================
+   TOMBOL AKSI
+======================= */
+.table .btn {
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .table-box {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 900px;
+    }
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   SAMAKAN TABEL DENGAN VERIF
+   TANPA UBAH LAYOUT
+========================= */
+
+/* box tabel */
+.table-box {
+    background: #ffffff;
+    border-radius: 8px;              /* sama kayak verif */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* tabel umum */
+.table {
+    width: 100%;
+    font-size: 14px;
+}
+
+/* header tabel */
+.table thead th {
+    background: #8fb8e8;             /* WARNA VERIF */
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* body tabel */
+.table tbody td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+}
+
+/* kolom teks panjang biar enak dibaca */
+.table tbody td:nth-child(5),
+.table tbody td:nth-child(6) {
+    text-align: left;
+}
+
+/* tombol */
+.table .btn {
+    padding: 6px 9px;
+    border-radius: 6px;
+}
+
+/* grup aksi */
+.aksi {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* badge kategori biar rapi */
+.badge-kategori {
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #eef3fb;
+    color: #083a70;
+}

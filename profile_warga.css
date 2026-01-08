@@ -1,0 +1,231 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8ecf5;
+}
+
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0a2a47;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.sidebar.close {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #1b4d8e;
+}
+
+/* ===== MAIN ===== */
+.main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.main.expand {
+    margin-left: 0;
+    width: 100%;
+}
+
+
+/* HEADER */
+.dashboard-header {
+    background: #083a70;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.dashboard-header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTENT */
+.content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* PROFILE CARD */
+.profile-box {
+    width: 70%;                     /* CARD TIDAK FULL */
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+/* PROFILE HEADER */
+.profile-header {
+    display: flex;
+    gap: 25px;
+}
+
+.photo {
+    width: 120px;
+    height: 140px;
+    background: #9be8d8;
+    border-radius: 6px;
+    background-image: url('https://img.icons8.com/ios-filled/200/000000/user.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-name h2 {
+    font-size: 22px;
+}
+
+.profile-name p {
+    margin-top: 5px;
+    color: rgb(90, 90, 90);
+}
+
+/* SECTION */
+.section {
+    margin-top: 25px;
+    position: relative;
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.edit-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 12px;
+    background: #1f3fa8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ROW */
+.row {
+    display: flex;
+    gap: 40px;      /* JARAK YANG LEBIH MIRIP FOTO */
+}
+
+.col p {
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-left p {
+    width: 250px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+/* ===== MODAL ===== */
+.modal-pribadi {
+    max-width: 650px;
+}
+.modal-body {
+    padding: 24px 30px;
+}
+
+.photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px; /* dari 50% → 10px */
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ddd;
+}
+
