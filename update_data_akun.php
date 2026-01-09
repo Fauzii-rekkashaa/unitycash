@@ -90,7 +90,7 @@ if (!empty($password)) {
 /* ===============================
    UPDATE SESSION
 ================================ */
-$_SESSION['username_pengurus'] = $username;
+
 
 echo "<script>
     alert('Data akun berhasil diperbarui');

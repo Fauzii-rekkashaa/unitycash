@@ -9,9 +9,7 @@ body {
     background: #e8ecf5;
 }
 
-/* ======================
-   SIDEBAR
-====================== */
+/* ===== SIDEBAR ===== */
 .sidebar {
     width: 230px;
     height: 100vh;
@@ -22,7 +20,6 @@ body {
     top: 0;
     padding-top: 10px;
     transition: 0.3s;
-    z-index: 1000;
 }
 
 .sidebar.close {
@@ -36,9 +33,10 @@ body {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 15px 10px;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .sidebar a {
@@ -47,14 +45,15 @@ body {
     gap: 12px;
     padding: 12px 18px;
     color: white;
+    font-size: 15px;
     text-decoration: none;
-    font-size: 14px;
 }
 
 .sidebar a.active,
 .sidebar a:hover {
     background: #1b4d8e;
 }
+
 
 /* ======================
    MAIN CONTENT

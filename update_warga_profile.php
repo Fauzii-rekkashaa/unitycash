@@ -1,24 +1,31 @@
 <?php
 include 'koneksi.php';
 
-$nik = $_POST['nik'];
-$username = $_POST['username'];
-$password = $_POST['password'] ?? '';
-
-// username
-mysqli_query($koneksi, "UPDATE warga SET username='$username' WHERE nik='$nik'");
-
-// password
-if (!empty($password)) {
-    $hash = password_hash($password, PASSWORD_DEFAULT);
-    mysqli_query($koneksi, "UPDATE warga SET password='$hash' WHERE nik='$nik'");
+// pastikan request dari form
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header("Location: profile_warga.php");
+    exit;
 }
 
-// foto
-if (!empty($_FILES['foto']['name'])) {
-    $namaFile = time() . '_' . $_FILES['foto']['name'];
-    move_uploaded_file($_FILES['foto']['tmp_name'], "uploads/" . $namaFile);
-    mysqli_query($koneksi, "UPDATE warga SET foto='$namaFile' WHERE nik='$nik'");
-}
+// ambil & amankan data
+$nik           = mysqli_real_escape_string($koneksi, $_POST['nik']);
+$nama_warga    = mysqli_real_escape_string($koneksi, $_POST['nama_warga']);
+$jenis_kelamin = mysqli_real_escape_string($koneksi, $_POST['jenis_kelamin']);
+$tempat_lahir = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir']);
+$tanggal_lahir = mysqli_real_escape_string($koneksi, $_POST['tanggal_lahir']);
+$alamat        = mysqli_real_escape_string($koneksi, $_POST['alamat']);
 
+// update DATA PRIBADI
+mysqli_query($koneksi, "
+    UPDATE warga SET
+        nama_warga    = '$nama_warga',
+        jenis_kelamin = '$jenis_kelamin',
+        tempat_lahir  = '$tempat_lahir',
+        tanggal_lahir = '$tanggal_lahir',
+        alamat        = '$alamat'
+    WHERE nik = '$nik'
+") or die(mysqli_error($koneksi));
+
+// kembali ke profil
 header("Location: profile_warga.php");
+exit;

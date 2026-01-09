@@ -291,43 +291,7 @@ $data = mysqli_fetch_assoc($query);
     });
 </script>
 
-<script>
-    const modal = document.getElementById("modalEditPribadi");
-    const editBtn = document.getElementById("btnEditPribadi");
 
-    editBtn.addEventListener("click", function () {
-        modal.style.display = "block";
-    });
-
-    function closeModal() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(e) {
-        if (e.target === modal) {
-            closeModal();
-        }
-    }
-</script>
-
-<script>
-    const modalAkun = document.getElementById("modalEditAkun");
-    const btnEditAkun = document.getElementById("btnEditAkun");
-
-    btnEditAkun.addEventListener("click", function () {
-        modalAkun.style.display = "block";
-    });
-
-    function closeModalAkun() {
-        modalAkun.style.display = "none";
-    }
-
-    window.addEventListener("click", function(e) {
-        if (e.target === modalAkun) {
-            closeModalAkun();
-        }
-    });
-</script>
 
 </body>
 </html>

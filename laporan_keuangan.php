@@ -46,7 +46,6 @@ $query = "
     FROM riwayat_pembayaran rp
     JOIN pembayaran p ON rp.id_pembayaran = p.id_pembayaran
     WHERE rp.status_pembayaran='disetujui'
-    AND rp.nik='$nik'
 ";
 
 if ($jenis === "Uang Masuk") {
@@ -82,31 +81,19 @@ $bulanList = [
 
 <body>
 
-<!-- ===== SIDEBAR (DISAMAKAN) ===== -->
+<!-- ===== SIDEBAR ===== -->
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <i class="fa-solid fa-coins"></i>
         <span>UNITYCASH</span>
     </div>
 
-    <a href="dashboard_admin.php">
-        <i class="fa-solid fa-gauge"></i> Halaman Utama
-    </a>
-    <a href="data_warga.php">
-        <i class="fa-solid fa-users"></i> Data Warga
-    </a>
-    <a href="verif_pembayaran_adm.php">
-        <i class="fa-solid fa-file-invoice"></i> Verifikasi Pembayaran
-    </a>
-    <a href="data_kelola_uang.php">
-        <i class="fa-solid fa-money-bill-transfer"></i> Data Kelola Uang
-    </a>
-    <a href="laporan_keuangan.php" class="active">
-        <i class="fa-solid fa-wallet"></i> Laporan Keuangan
-    </a>
-    <a href="profil.php">
-        <i class="fa-solid fa-user"></i> Profil Saya
-    </a>
+    <a href="dashboard_admin.php"><i class="fa-solid fa-gauge"></i> Halaman Utama</a>
+    <a href="data_warga.php" ><i class="fa-solid fa-users"></i> Data Warga</a>
+    <a href="verif_pembayaran_adm.php"><i class="fa-solid fa-file-invoice"></i> Verifikasi Pembayaran</a>
+    <a href="data_kelola_uang.php"><i class="fa-solid fa-money-bill-transfer"></i> Data Kelola Uang</a>
+    <a href="laporan_keuangan.php"class="active"><i class="fa-solid fa-wallet"></i> Laporan Keuangan</a>
+    <a href="profil.php"><i class="fa-solid fa-user"></i> Profil Saya</a>
 </div>
 
 <!-- ===== MAIN ===== -->
